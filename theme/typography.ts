@@ -1,3 +1,4 @@
+import { Platform } from 'react-native';
 import colors from './colors';
 
 type textprops = {
@@ -47,7 +48,7 @@ export type Typography = {
   captionTextBold: textprops,
 };
 
-const fontFamily = 'sans-serif';
+const fontFamily = Platform.select({ android: 'sans-serif', ios: 'Helvetica' });
 const fontWeightRegular = 'normal';
 const fontWeightBold = 'bold';
 
